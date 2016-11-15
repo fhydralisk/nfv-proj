@@ -48,9 +48,9 @@ if __name__ == '__main__':
     print "bad configuration file. check controller.conf" 
   
   
-  controllerrunner = ControllerRunner(redirectorPort=redirectorPort, cachePort=cachePort, interface='')
+  controllerrunner = ControllerRunner(redirector_port=redirectorPort, cache_port=cachePort, interface='')
   controllerrunner.profile = profile
   #print controllerrunner.controlServer.cacheFactory
   HttpServer.start_server(restport, controllerrunner.controlServer.redirectorFactory, controllerrunner.controlServer.cacheFactory)
-  controllerrunner.runServer()
+  controllerrunner.run_server()
 
